@@ -36,6 +36,7 @@ class ProductDetailView(DetailView):
 #Function Based View
 def product_detail_view(request):
     queryset = Product.objects.all()
+    
     context = {
         'object_list': queryset
     }
