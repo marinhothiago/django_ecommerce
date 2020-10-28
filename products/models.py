@@ -44,3 +44,4 @@ class Product(models.Model): #product_category
     #python 2
     def __unicode__(self):
         return self.title
+   
