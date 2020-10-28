@@ -5,13 +5,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 
-from .views import (home_page,
-                    about_page,
-                    contact_page,
-                    login_page,
+from .views import (home_page, 
+                    about_page, 
+                    contact_page, 
+                    login_page, 
                     logout_page,
                     register_page
-                    )
+)
 
 urlpatterns = [
     path('', home_page, name='home'),
@@ -27,7 +27,5 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    urlpatterns = urlpatterns + \
-        static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns = urlpatterns + \
-        static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
