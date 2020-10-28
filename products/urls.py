@@ -1,4 +1,3 @@
-
 from .views import (
     ProductListView,
     ProductDetailSlugView,
